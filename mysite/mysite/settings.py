@@ -15,7 +15,7 @@ load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['*']
 
@@ -84,12 +84,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'glovo_app',
+        'ENGINE': os.getenv('ENGINE'),
+        'NAME': os.getenv('NAME'),
         'USER': 'postgres',
-        'PASSWORD': 'adminadmin',
-        'HOST': 'localhost',
-        'PORT': 5432,
+        'PASSWORD': os.getenv('PASSWORD'),
+        'HOST': os.getenv('HOST'),
+        'PORT': os.getenv('PORT'),
     }
 }
 
@@ -168,8 +168,10 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:5173",
+    'http://localhost:3000',
+    'http://localhost:8000',
+    'http://localhost:5173',
+    'http://localhost:4200',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
