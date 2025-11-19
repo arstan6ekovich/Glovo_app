@@ -1,0 +1,18 @@
+/* Тил табдары туура чыкпай жатса */
+.tabbed_translation_field {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Inline форманын ичиндеги текст кутучалар чекеден чыкпаш үчүн */
+.inline-related .form-row input,
+.inline-related .form-row textarea,
+.inline-related .form-row select {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Translation табдар аралыгын кичирейтүү */
+ul.tabbed_translation_fields {
+  margin-bottom: 8px !important;
+}
