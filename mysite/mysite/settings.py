@@ -84,12 +84,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('ENGINE'),
-        'NAME': os.getenv('NAME'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'glovo_app',
         'USER': 'postgres',
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
+        'PASSWORD': 'adminadmin',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
 
